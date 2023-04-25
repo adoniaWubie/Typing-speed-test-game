@@ -147,7 +147,7 @@ function resetValues() {
   input_area.value = "";
   quote_text.innerHTML = "Click here to type again";
   timer_text.textContent = timeLeft + "s";
-  
+  accuracy_text.textContent = 100 + "%"
   cpm_group.style.display = "none";
   wpm_group.style.display = "none";
   document.querySelector(".timer").style.display = "block";
