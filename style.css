@@ -21,6 +21,7 @@ body {
   background-color: rgb(3, 34, 58);
   color: rgb(217, 217, 217);
   text-align: center;
+  overflow: scroll !important;
 }
 
 .quote {
