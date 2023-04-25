@@ -150,6 +150,8 @@ function resetValues() {
   accuracy_text.textContent = 100;
   timer_text.textContent = timeLeft + "s";
   error_text.textContent = 0;
+  cpm_group.style.display = "none";
+  wpm_group.style.display = "none";
   document.querySelector(".timer").style.display = "block";
 }
 
