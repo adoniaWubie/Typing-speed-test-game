@@ -108,7 +108,7 @@ function processCurrentText() {
   // update accuracy text
   let correctCharacters = characterTyped - (total_errors + errors);
   let accuracyVal = (correctCharacters / characterTyped) * 100;
-  accuracy_text.textContent = Math.round(accuracyVal);
+  accuracy_text.textContent = Math.round(accuracyVal) + "%";
 
   // if current text is completely typed
   // irrespective of errors
@@ -146,7 +146,6 @@ function resetValues() {
   input_area.disabled = false;
   input_area.value = "";
   quote_text.innerHTML = "Click here to type again";
-  accuracy_text.textContent = 100;
   timer_text.textContent = timeLeft + "s";
   
   cpm_group.style.display = "none";
