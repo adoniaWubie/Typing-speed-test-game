@@ -144,12 +144,11 @@ function resetValues() {
   characterTyped = 0;
   quoteNo = 0;
   input_area.disabled = false;
-
   input_area.value = "";
   quote_text.innerHTML = "Click here to type again";
   accuracy_text.textContent = 100;
   timer_text.textContent = timeLeft + "s";
-  error_text.textContent = 0;
+  
   cpm_group.style.display = "none";
   wpm_group.style.display = "none";
   document.querySelector(".timer").style.display = "block";
@@ -157,6 +156,7 @@ function resetValues() {
 
 function startGame() {
   resetValues();
+  error_text.textContent = 0;
   updateQuote();
 
   // clear old and start a new timer
