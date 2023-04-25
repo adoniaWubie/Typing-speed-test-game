@@ -156,8 +156,8 @@ body {
   padding: 20px;
   color: transparent;
   position: absolute;
-  top: -5px;
-  left: -5px;
+  top: -16px;
+  left: -15px;
   resize: none;
   border: none;
 }
