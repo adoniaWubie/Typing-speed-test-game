@@ -157,10 +157,10 @@ function startGame() {
   resetValues();
   error_text.textContent = 0;
   updateQuote();
-accuracy_text.textContent = 100 + "%"
   // clear old and start a new timer
   clearInterval(timer);
   timer = setInterval(updateTimer, 1000);
+  accuracy_text.textContent = 100 + "%"
 }
 
 function finishGame() {
