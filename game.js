@@ -144,10 +144,10 @@ function resetValues() {
   characterTyped = 0;
   quoteNo = 0;
   input_area.disabled = false;
+
   input_area.value = "";
   quote_text.innerHTML = "Click here to type again";
   timer_text.textContent = timeLeft + "s";
-  
   cpm_group.style.display = "none";
   wpm_group.style.display = "none";
   document.querySelector(".timer").style.display = "block";
@@ -157,10 +157,11 @@ function startGame() {
   resetValues();
   error_text.textContent = 0;
   updateQuote();
+
   // clear old and start a new timer
   clearInterval(timer);
   timer = setInterval(updateTimer, 1000);
-  accuracy_text.textContent = 100 + "%"
+  accuracy_text.textContent = 100 + "%";
 }
 
 function finishGame() {
@@ -180,8 +181,9 @@ function finishGame() {
   document.querySelector(".timer").style.display = "none";
 
   // display the cpm and wpm
+
+  resetValues();
   cpm_group.style.display = "block";
   wpm_group.style.display = "block";
-  resetValues();
   quote_text.textContent = "Click here to type again";
 }
