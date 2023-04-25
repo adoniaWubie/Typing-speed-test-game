@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Adoab typing</title>
+  </head>
+  <body>
+    <div class="container">
+      <p class="heading">Simple Speed Typing</p>
+      <div class="header">
+        <div class="wpm">
+          <p class="header_text">WPM</p>
+          <p class="curr_wpm">100</p>
+        </div>
+        <div class="cpm">
+          <p class="header_text">CPM</p>
+          <p class="curr_cpm">100</p>
+        </div>
+        <div class="errors">
+          <p class="header_text">Errors</p>
+          <p class="curr_errors">0</p>
+        </div>
+        <div class="accuracy">
+          <p class="header_text">Accuracy</p>
+          <p class="curr_accuracy">100<span>%</span></p>
+        </div>
+      </div>
+      <div class="contain-it">
+        <div class="timer">
+          <p class="curr_time">30s</p>
+        </div>
+        <p class="quote">Click somewhere here to type</p>
+        <textarea
+          class="input_area"
+          placeholder=""
+          oninput="processCurrentText()"
+          onfocus="startGame()"
+          spellcheck="false"
+        ></textarea>
+      </div>
+    </div>
+    <a
+      href="https://www.typingpal.com/en/documentation/school-edition/pedagogical-resources/typing-speed"
+      target="_blank"
+      >About Typing Speed</a
+    >
+    <audio id="keySound">
+      <source src="kk.m4a" type="audio/mp3" />
+    </audio>
+    <script src="game.js"></script>
+  </body>
+</html>
