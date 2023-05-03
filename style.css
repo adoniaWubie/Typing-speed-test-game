@@ -7,17 +7,22 @@
   user-select: none;
 }
 
+:root {
+  --clr-green: rgb(1, 181, 25);
+  --background: rgb(3, 34, 58);
+}
+
 a,
 a:visited {
   font-size: 20px;
   margin-bottom: 2rem;
-  filter: brightness(1.5);
+  color: var(--clr-green);
   text-decoration: none;
   border-bottom: solid blueviolet 2px;
 }
 
 body {
-  background-color: rgb(3, 34, 58);
+  background-color: var(--background);
   color: rgb(217, 217, 217);
   text-align: center;
 }
@@ -46,7 +51,7 @@ body {
   background: linear-gradient(
     to right,
     rgb(0, 145, 255) 40%,
-    rgb(255, 0, 217) 60%
+    var(--clr-green) 60%
   );
   background-clip: text;
   color: transparent;
@@ -71,7 +76,7 @@ body {
   margin-left: 1rem;
   padding: 20px;
   border-radius: 8px;
-  border: solid 0.5px rgb(255, 0, 217);
+  border: solid 0.5px var(--clr-green);
   filter: drop-shadow(0 0 1px white);
 }
 
@@ -100,8 +105,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: solid rgb(255, 0, 217) 0.01px;
-  box-shadow: 0 0 10px rgb(255, 0, 217);
+  border: solid var(--clr-green) 0.01px;
+  box-shadow: 0 0 10px var(--clr-green);
   border-radius: 10px;
 }
 
@@ -124,7 +129,7 @@ body {
 
 .curr_time {
   font-size: 25px;
-  background: linear-gradient(to right, rgb(255, 0, 217), rgb(0, 145, 255));
+  background: linear-gradient(to right, var(--clr-green), rgb(0, 145, 255));
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;
