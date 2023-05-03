@@ -40,8 +40,10 @@ function sounding() {
   input_area.focus();
   if (is_muted == false) {
     keySound.muted = true;
+    sound.style.opacity = ".3";
   } else {
     keySound.muted = false;
+    sound.style.opacity = "1";
   }
   is_muted = true;
 }
