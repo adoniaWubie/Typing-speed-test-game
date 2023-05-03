@@ -105,10 +105,21 @@ body {
   border-radius: 10px;
 }
 
-.timer {
+.curr_time {
   position: absolute;
   top: 1rem;
   left: 10%;
+}
+.sound {
+  padding: 0.4rem;
+  font-size: 2rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 0.1rem;
+  right: 5%;
+  z-index: 99;
 }
 
 .curr_time {
@@ -167,11 +178,15 @@ body {
 }
 
 .correct_char {
-  color: darkgray;
+  color: gray;
 }
 
 @media (max-width: 500px) {
   .quote {
     font-size: 20px;
   }
+}
+
+.underline {
+  text-decoration: underline;
 }

@@ -32,6 +32,19 @@ let wpm_group = document.querySelector(".wpm");
 let error_group = document.querySelector(".errors");
 let accuracy_group = document.querySelector(".accuracy");
 const keySound = document.getElementById("keySound");
+const sound = document.querySelector(".sound");
+sound.addEventListener("click", sounding);
+let is_muted = false;
+
+function sounding() {
+  input_area.focus();
+  if (is_muted == false) {
+    keySound.muted = true;
+  } else {
+    keySound.muted = false;
+  }
+  is_muted = true;
+}
 
 let timeLeft = TIME_LIMIT;
 let timeElapsed = 0;
@@ -50,7 +63,6 @@ function updateQuote() {
   );
 
   current_quote = quotes_array[randomParagraph];
-
   // separate each character and make an element
   // out of each of them to individually style them
   current_quote.split("").forEach((char) => {
@@ -69,9 +81,8 @@ function updateQuote() {
 
 function processCurrentText() {
   // get current input text and split it
-  curr_input = input_area.value;
-  curr_input_array = curr_input.split("");
-
+  let curr_input = input_area.value;
+  let curr_input_array = curr_input.split("");
   // increment total characters typed
   characterTyped++;
   // toNext();
