@@ -36,16 +36,18 @@ const sound = document.querySelector(".sound");
 sound.addEventListener("click", sounding);
 let is_muted = false;
 
-function sounding() {
+function sounding(e) {
+  e.preventDefault();
   input_area.focus();
   if (is_muted == false) {
     keySound.muted = true;
     sound.style.opacity = ".3";
+    is_muted = true;
   } else {
     keySound.muted = false;
     sound.style.opacity = "1";
+    is_muted = false;
   }
-  is_muted = true;
 }
 
 let timeLeft = TIME_LIMIT;
